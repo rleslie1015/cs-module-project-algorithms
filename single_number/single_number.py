@@ -2,15 +2,15 @@ import random
 
 arr = []
 
-# for i in range(50):
-#     arr.append(i)
-#     arr.append(i)
+for i in range(1000000):
+    arr.append(i)
+    arr.append(i)
 
-# random.shuffle(arr)
-# rand_index = random.randint(0, len(arr))
-# num = arr.pop(rand_index)
-# print('arr', arr)
-# print('num', num)
+random.shuffle(arr)
+rand_index = random.randint(0, len(arr))
+num = arr.pop(rand_index)
+print('arr', arr)
+print('num', num)
 
 '''
 Input: a List of integers where every int except one shows up twice
@@ -39,15 +39,17 @@ def single_number(arr):
         pointer+=2
     return temp_list[0]
 
-# time complexity is O(n) for the the loop plus whatever arr.sort is
+# time complexity is O(n) for the the loop 
+# plus O(n log n) for the .sort method
+
 
 
 # sample_arr = [1, 1, 4, 4, 5, 5, 3, 9, 9, 0, 0]
 # random.shuffle(sample_arr)
-# answer = single_number(sample_arr)
+# answer = single_number(arr)
 # print(answer, 'answer')
 if __name__ == '__main__':
     # Use the main function to test your implementation
-    arr = [1, 1, 4, 4, 5, 5, 3, 3, 9, 0, 0]
+    # arr = [1, 1, 4, 4, 5, 5, 3, 3, 9, 0, 0]
 
     print(f"The odd-number-out is {single_number(arr)}")
