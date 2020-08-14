@@ -9,7 +9,7 @@ for i in range(1000000):
 random.shuffle(arr)
 rand_index = random.randint(0, len(arr))
 num = arr.pop(rand_index)
-print('arr', arr)
+# print('arr', arr)
 print('num', num)
 
 '''
